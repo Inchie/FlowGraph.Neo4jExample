@@ -1,0 +1,48 @@
+{
+    "name": "inchie/flowgraph-neo4j-example",
+    "description": "Neo4j example with FLOW",
+    "license": "MIT",
+    "support": {
+        "email": "timo.nussbaum@gmx.de"
+    },
+    "authors": [{
+        "name": "Timo Nussbaum",
+        "email": "timo.nussbaum@gmx.de"
+    }],
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin"
+    },
+    "require": {
+        "php": "^7.2",
+        "neos/flow": "~5.3.0",
+        "graphaware/neo4j-php-ogm": "@rc",
+        "inchie/flowgraph-neo4j": "@dev"
+    },
+    "require-dev": {
+        "neos/buildessentials": "~5.3.0",
+        "neos/behat": "dev-master",
+        "phpunit/phpunit": "~6.0.0",
+        "mikey179/vfsstream": "~1.6"
+    },
+    "repositories": {
+        "distributionPackages": {
+            "type": "path",
+            "url": "./DistributionPackages/*"
+        }
+    },
+    "replace": {
+        "typo3/flow-base-distribution": "self.version"
+    },
+    "suggest": {
+        "ext-pdo_sqlite": "For running functional tests out-of-the-box this is required"
+    },
+    "scripts": {
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    }
+}
+
+
