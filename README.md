@@ -5,8 +5,8 @@ database [Neo4j](https://neo4j.com/).
 
 ### Installation
 
-I highly recommend to use **docker**. For this example I created a repository with all 
-needed docker containers. You find it [here!!!!](https://github.com/Inchie/FlowGraph.Docker).
+I highly recommend using **docker**. For this example I have created a repository 
+with all the necessary docker containers. You can find it [here!!!!](https://github.com/Inchie/FlowGraph.Docker).
 
 In this repository I set the following path to the *example application*. Feel free to change 
 it (But don't forget to change it in the docker-compose.yaml too).
@@ -15,21 +15,21 @@ it (But don't forget to change it in the docker-compose.yaml too).
  /var/www/graph.app
 ```
 
-To install this example I use [Composer](https://getcomposer.org). 
+To install this example it's best to use [Composer](https://getcomposer.org). 
 
 - Execute into the docker container with 'docker exec -it graph-php-apache bash'
 - Insert the composer.json and composer.lock of this example application in the directory '/var/www/htdocs'
-- At last run the command 'composer install' in the directory /var/www/htdocs
+- Finally run the command 'composer install' in the directory /var/www/htdocs
 
 That's it. 
 
-### Open Application
+### Open the Application
 
 Now you can open the application with the following url http://172.16.239.27
 
 #### Installation without docker
 
-If you don't want to use docker you have to change the storage settings. You find them
+If you don't want to use docker you have to change the storage settings. You can find them
 in the distribution package.
 
 
